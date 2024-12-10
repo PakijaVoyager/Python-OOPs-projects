@@ -30,15 +30,15 @@ class BankAtm: #Initializing class name
             sys.exit()
         else:
             print("Not in the option")
-            self.menu()
+            self.menu() 
             
-    def CreatePin(self):
+    def CreatePin(self): #This method create new pin for the user
         pin = int(input("Enter your new pin : "))
         print("Your pin created successfully")
         self.pin = pin
         self.menu()
     
-    def ChangePin(self):
+    def ChangePin(self): #This method change the pin.
         pins = int(input("Enter your current pin : "))
         if pins == self.pin:
             new_pin = int(input("Enter your new pin : "))
@@ -53,7 +53,7 @@ class BankAtm: #Initializing class name
             self.ChangePin()
         self.menu()
             
-    def AddBalance(self):
+    def AddBalance(self): #This method is used to add balance in user's account
         pin = int(input("Enter your pin : "))
         if pin == self.pin:
             balance = int(input("Enter the amount : "))
@@ -64,7 +64,7 @@ class BankAtm: #Initializing class name
             self.AddBalance()
         self.menu()
     
-    def WithdrawBalance(self):
+    def WithdrawBalance(self): #This method helps to withdraw money from the user.
         pin = int(input("Enter your pin : "))
         if pin == self.pin:
             balance = int(input("Enter the amount : "))
@@ -80,7 +80,7 @@ class BankAtm: #Initializing class name
             self.WithdrawBalance()
         self.menu()
     
-    def RemBalance(self):
+    def RemBalance(self): #This method is used to check remaining balance
         pin = int(input("Enter you pin : "))
         if pin == self.pin:
             print(f"Your remaining balance is Rs.{self.balance}")
